@@ -1,0 +1,30 @@
+class RecursiveArraySum {
+
+    public static void main(String[] args) {
+        int[] numbers = {12, 15, 8, 2};  // Input array
+
+        System.out.print("Array Elements: ");
+        printArray(numbers);
+
+        int total = sumArrayRecursively(numbers, 0);  // Recursive sum call
+        System.out.println("\nTotal Sum: " + total);
+    }
+
+    // Recursive method to calculate sum
+    public static int sumArrayRecursively(int[] arr, int index) {
+        // Base case: If index is out of bounds
+        if (index == arr.length) {
+            return 0;
+        }
+
+        // Add current element to sum of the rest
+        return arr[index] + sumArrayRecursively(arr, index + 1);
+    }
+
+    // Utility method to print the array
+    public static void printArray(int[] arr) {
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+    }
+}
