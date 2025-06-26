@@ -23,20 +23,24 @@ class MatchParentheses {
         return stack.isEmpty();
     }
 
-    // Helper method to check opening brackets
+    
     public static boolean isOpeningBracket(char ch) {
         return ch == '(' || ch == '[' || ch == '{';
     }
 
-    // Helper method to check closing brackets
+    
     public static boolean isClosingBracket(char ch) {
         return ch == ')' || ch == ']' || ch == '}';
     }
 
-    // Helper method to match opening and closing brackets
     public static boolean isMatchingPair(char open, char close) {
         return (open == '(' && close == ')') ||
                (open == '[' && close == ']') ||
                (open == '{' && close == '}');
     }
 }
+
+
+OUTPUT:
+Expression: ((a+b)*[c/d])
+Balanced: true
